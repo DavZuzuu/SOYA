@@ -1,0 +1,366 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0 auto;
+}
+
+/* tete de page */
+
+section.top-page {
+    background: url("../image/background.jpg");
+    background-size: cover;
+    height: 90vh;
+    padding: 7%;
+}
+
+header{
+    display: flex;
+    align-items: center;
+}
+
+h1.big-titre{
+    font-size: 200%;
+    font-family: "Abril Fatface", cursive;
+    position: relative;
+}
+
+h1.big-titre::before{
+    content: "";
+    position: absolute;
+    background-color: #e6db42;
+    width: 100%;
+    height: 7px;
+    bottom: 0;
+    border-radius: 50px 50px;
+}
+
+/* menu de navigation */
+
+h1.slogan {
+    width: 50%;
+    color: black;
+    font-size: 80px;
+    font-family: "Abril Fatface", cursive;
+    font-weight: 100;
+}
+
+nav.navigation {
+    display: flex;
+    list-style-type: none;
+    margin-left: 4%;
+    width: 80%;
+    justify-content: space-between;
+    font-family: "Abril Fatface", cursive;
+}
+
+a.boutons {
+    text-decoration: none;
+    color: black;
+    background-color: #e6db4200;
+    padding: 10px 20px;
+    border-radius: 50px 50px;
+    transition: background-color 0.5s ease;
+}
+
+a.boutons:hover {
+    background-color: #e6db42;
+}
+
+.presentation {
+    margin: 10px;
+    font-size: 25px;
+    position: relative;
+    font-family: "Abril Fatface", cursive;
+}
+
+/* Les Titres */
+
+.section-title {
+    font-size: 50px;
+    font-family: "Abril Fatface", cursive;
+    font-weight: 100;
+    position: relative;
+    margin-left: 2%;
+}
+
+.section-title::before {
+    content: "";
+    position: absolute;
+    background-color: #e6db42;
+    width: 50px;
+    height: 7px;
+    bottom: 0;
+    border-radius: 50px 50px;
+}
+
+
+/* Points de vente*/
+
+.carte-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.carte {
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+    margin: 50px auto;
+    font-family: "Abril Fatface", cursive;
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 50px 50px;
+}
+
+.carte-flip {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.carte:hover .carte-flip {
+    transform: rotateY(180deg);
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color:black;
+    font-weight: bold;
+}
+
+.face-front-vente {
+    background-color: #e6db42;
+}
+
+.face-back {
+    background-color: #e6db42;
+    transform: rotateY(180deg);
+}
+
+.boutons-carte{
+    color: #000;
+}
+
+/* Nos Porduis*/
+
+.nos-produits {
+    margin: 0 auto;
+}
+
+.produits-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.produits {
+    width: 400px;
+    height: 500px;
+    perspective: 1000px;
+    margin: 50px auto;
+    font-family: "Abril Fatface", cursive;
+    margin: 50px;
+    border-radius: 50px 50px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.produits-carte-flip {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.produits:hover .produits-carte-flip {
+    transform: rotateY(180deg);
+}
+
+.produits-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color:black;
+    font-weight: bold;
+}
+
+.p1face-front {
+    background-image: url(../image/Produit\ pour\ poux\ 1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.p1face-back {
+    background-color: #e6db42;
+    transform: rotateY(180deg);
+}
+
+.p2face-front {
+    background-image: url(../image/Produit\ pour\ poux\ 2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.p2face-back {
+    background-color: #e6db42;
+    transform: rotateY(180deg);
+}
+
+.p3face-front {
+    background-image: url(../image/Produit\ pour\ poux\ 3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.p3face-back {
+    background-color: #e6db42;
+    transform: rotateY(180deg);
+}
+
+.p4face-front {
+    background-image: url(../image/Produit\ pour\ poux\ 4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.p4face-back {
+    background-color: #e6db42;
+    transform: rotateY(180deg);
+}
+
+.p5face-front {
+    background-image: url(../image/Paque\ pour\ poux.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.p5face-back {
+    background-color: #e6db42;
+    transform: rotateY(180deg);
+}
+
+.cadre {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(160, 160, 160, 0.575); /* Fond semi-transparent pour le cadre */
+        padding: 10px;
+        box-sizing: border-box; /* Pour inclure le padding dans la largeur du cadre */
+}
+
+.detail{
+    display: inline-block;
+    font-size: 19px;
+}
+
+.def {
+    margin: 20px;
+    display: inline-block;
+    font-size: 19px;
+}
+
+video {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Styles pour les petits écrans (moins de 768px de largeur) */
+@media screen and (max-width: 758px) {
+    
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav.navigation {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px; /* Espace entre le titre et le menu sur les petits écrans */
+    }
+
+    a.boutons {
+        display: block;
+        margin-bottom: 10px; /* Espace entre les boutons */
+    }
+
+    section.top-page {
+      height: auto;
+      padding: 10%;
+      background-size: cover; /* Ajuste la taille de l'image pour couvrir entièrement l'élément */
+      background-position: center; /* Centre l'image horizontalement et verticalement */
+    }
+  
+    h1.slogan {
+      font-size: 50px;
+    }
+  
+    .presentation {
+      font-size: 18px;
+    }
+  
+    nav.navigation {
+      margin-left: 0;
+      width: 100%;
+      justify-content: center;
+    }
+  
+    .navigation li {
+      margin: 10px;
+    }
+  
+    .produits, .video-section {
+      margin: 50px;
+    }
+  
+    .carte {
+      width: 100%;
+    }
+  
+  }
+  
+  /* Pour les écrans moyens et grands */
+  @media screen and (min-width: 758px) {
+
+    section.top-page {
+        height: auto;
+        padding: 10%;
+        background-size: cover; /* Ajuste la taille de l'image pour couvrir entièrement l'élément */
+        background-position: center; /* Centre l'image horizontalement et verticalement */
+      }
+
+    .carte-container {
+      justify-content: space-around;
+    }
+
+    .produits-container {
+        justify-content: space-around;
+
+      }
+
+      .produits, .video-section {
+        margin: 50px;
+      }
+  
+    
+  }
+  
