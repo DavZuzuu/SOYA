@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Playwrite+DE+Grund&family=Short+Stack&display=swap');
+
+*{
+    font-family: "Short Stack";
+}
+
+section.header{
+    background-image: url(image/Bg\ header.jpg);
+    background-size: cover; /* L'image couvre tout l'élément */
+    background-position: center;
+    height: 40vh;
+}
+
+.slogan {
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.slogan h1 {
+    font-size: 2.5rem;
+}
+
+.slogan p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 1rem;
+}
+
+/* Les Titres */
+
+.section-title {
+    font-size: 50px;
+    font-weight: 100;
+    position: relative;
+    margin-left: 2%;
+    margin-top: 70px;
+}
+
+.video-section .section-title {
+    margin-top: 0;
+}
+
+.section-title::before {
+    content: "";
+    position: absolute;
+    background-color: #5ee9fe;
+    width: 50px;
+    height: 7px;
+    bottom: 0;
+    border-radius: 50px 50px;
+}
+
+/* Points de vente*/
+
+#nos-produits{
+    background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url(image/Bg\ header.jpg);
+    background-position: left top 20%;
+}
+
+.carte-container, .produits-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px;
+}
+
+.carte {
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+    margin: 15px auto;
+    overflow: hidden;
+    border-radius: 50px 50px;
+}
+
+.carte-flip {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.carte:hover .carte-flip {
+    transform: rotateY(180deg);
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color:black;
+    font-weight: bold;
+}
+
+.face-front-vente {
+    background-color: #5ee9fe;
+}
+
+.face-back {
+    background-color: #5ee9fe5c;
+    transform: rotateY(180deg);
+}
+
+.boutons-carte{
+    color: #000;
+}
+
+/* Nos Porduis*/
+
+#demonstration{
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(image/Bg\ header.jpg);
+    background-position: left top 20%;
+}
+
+.nos-produits {
+    margin: 0 auto;
+}
+
+.produits {
+    width: 350px;
+    height: 500px;
+    perspective: 1000px;
+    margin: 25px auto;
+    font-family: "Abril Fatface", cursive;
+    border-radius: 50px 50px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.produits-carte-flip {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.produits:hover .produits-carte-flip {
+    transform: rotateY(180deg);
+}
+
+.produits-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color:black;
+    font-weight: bold;
+}
+
+.p1face-front {
+    background-image: url(image/Produit\ pour\ poux\ 1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.p1face-back {
+    background-color: #5ee9fe;
+    transform: rotateY(180deg);
+}
+
+.p2face-front {
+    background-image: url(image/Produit\ pour\ poux\ 2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.p2face-back {
+    background-color: #5ee9fe;
+    transform: rotateY(180deg);
+}
+
+.p3face-front {
+    background-image: url(image/Produit\ pour\ poux\ 3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.p3face-back {
+    background-color: #5ee9fe;
+    transform: rotateY(180deg);
+}
+
+.p4face-front {
+    background-image: url(image/Produit\ pour\ poux\ 4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.p4face-back {
+    background-color: #5ee9fe;
+    transform: rotateY(180deg);
+}
+
+.p5face-front {
+    background-image: url(image/Paque\ pour\ poux.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.p5face-back {
+    background-color: #5ee9fe;
+    transform: rotateY(180deg);
+}
+
+.cadre {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(160, 160, 160, 0.575); /* Fond semi-transparent pour le cadre */
+        padding: 10px;
+        box-sizing: border-box; /* Pour inclure le padding dans la largeur du cadre */
+}
+
+.detail{
+    display: inline-block;
+    font-size: 19px;
+}
+
+.def {
+    padding: 20px;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+video {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+    margin-top: 90px !important;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .section-title {
+        font-size: 35px;
+    }
+
+    .carte {
+        width: 250px;
+        height: 180px;
+    }
+
+    .produits {
+        width: 300px;
+        height: 400px;
+    }
+
+    section.header {
+        height: 50vh;
+    }
+
+    .slogan {
+        padding: 15px;
+    }
+    
+    .slogan h1 {
+        font-size: 2rem;
+    }
+
+    .slogan p {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin: 0.8rem;
+    }
+
+    .def {
+        font-size: 0.9rem;
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .section-title {
+        font-size: 28px;
+    }
+
+    .carte {
+        width: 220px;
+        height: 160px;
+    }
+
+    .produits {
+        width: 250px;
+        height: 350px;
+    }
+
+    section.header {
+        height: 60vh;
+    }
+
+    .slogan {
+        padding: 10px;
+        margin: 10px;
+    }
+    
+    .slogan h1 {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .slogan p {
+        font-size: 0.95rem;
+        line-height: 1.4;
+        margin: 0.5rem;
+        padding: 5px;
+    }
+    
+    .slogan p br {
+        display: block;
+        content: "";
+        margin: 5px 0;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .nav-item {
+        margin: 5px 0;
+    }
+
+    .def {
+        font-size: 0.85rem;
+        padding: 10px;
+        line-height: 1.4;
+    }
+    
+    .produits-face {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .btn-outline-primary, .btn-outline-success {
+        margin-left: auto;
+        margin-right: 15px;
+        margin-top: 10px;
+    }
+
+    .nav-buttons {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .nav-buttons .btn {
+        width: 80%;
+        margin: 5px 0;
+        text-align: center;
+    }
+
+    .nav-buttons .btn:first-child {
+        margin-bottom: 10px;
+    }
+}
